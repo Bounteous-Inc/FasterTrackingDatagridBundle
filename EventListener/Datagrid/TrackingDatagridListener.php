@@ -6,9 +6,6 @@ use Oro\Bundle\DataGridBundle\Event\BuildBefore;
 
 class TrackingDatagridListener
 {
-    /** @var DatagridConfiguration $gridConfig */
-    protected $gridConfig;
-
     /**
      * @param BuildBefore $event
      */

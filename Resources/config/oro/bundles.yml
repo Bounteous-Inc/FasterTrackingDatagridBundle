@@ -1,0 +1,2 @@
+bundles:
+    - { name: DemacMedia\Bundle\FasterTrackingDatagridBundle\DemacMediaFasterTrackingDatagridBundle, priority: 50 }

@@ -1,0 +1,8 @@
+parameters:
+     demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_datagrid.class: DemacMedia\Bundle\FasterTrackingDatagridBundle\EventListener\Datagrid\TrackingDatagridListener
+
+services:
+    demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_datagrid:
+         class: %demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_datagrid.class%
+         tags:
+             - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before, method: buildBefore }

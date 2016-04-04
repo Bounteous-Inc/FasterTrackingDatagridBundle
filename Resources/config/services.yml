@@ -1,5 +1,7 @@
 parameters:
      demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_datagrid.class: DemacMedia\Bundle\FasterTrackingDatagridBundle\EventListener\Datagrid\TrackingDatagridListener
+     demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_after_datagrid.class: DemacMedia\Bundle\FasterTrackingDatagridBundle\EventListener\Datagrid\TrackingDatagridAfterListener
+
 
 services:
     demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_datagrid:
@@ -7,3 +9,7 @@ services:
          tags:
              - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.website-tracking-events-grid, method: buildBefore }
 
+    demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_after_datagrid:
+         class: %demacmedia.demac_media_faster_tracking_datagrid.event_listener.tracking_after_datagrid.class%
+         tags:
+             - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.after.website-tracking-events-grid, method: buildAfter }

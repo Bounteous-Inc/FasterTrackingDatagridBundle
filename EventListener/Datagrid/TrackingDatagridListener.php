@@ -28,11 +28,10 @@ class TrackingDatagridListener
                     'is equal to',
                     'is empty',
                     'is not empty',
-                    'is any Of',
+                    'is any of',
                     'is not any of'
                 ]
             );
         }
-
     }
 }

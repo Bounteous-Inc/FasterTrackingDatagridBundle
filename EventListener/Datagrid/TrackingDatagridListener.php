@@ -11,10 +11,6 @@ class TrackingDatagridListener
      */
     public function buildBefore(BuildBefore $event)
     {
-        if ('website-tracking-events-grid' !== $event->getConfig()->getName()) {
-            return;
-        }
-
         $fieldsToCustomize = [
             'name',
             'value',
@@ -35,3 +31,4 @@ class TrackingDatagridListener
         }
     }
 }
+
